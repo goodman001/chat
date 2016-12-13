@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example Chat App</title>
+    <!-- IE Edge Meta Tag -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!--This is for our custome css that will override bootstraps css -->
+    <link rel="stylesheet" href="css/styles.css">
+
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Latest jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/calendar.js"></script>
+</head>
+
+<body>
+    <div class="container" >
+		<ul class="nav navbar-nav navbar-right mobile-bar navbar-fixed-bottom">
+			<li>
+				<a href="mainpage.html">
+					<span class="menu-icon fa fa-home"></span>
+					Home
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="menu-icon fa fa-info"></span>
+					Chat
+				</a>
+			</li>
+			<li>
+				<a href="contacts.html">
+					<span class="menu-icon fa fa-picture-o"></span>
+					Contacts
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="menu-icon fa fa-bell-o"></span>
+					Me
+				</a>
+			</li>
+			
+		</ul>
+		<!-- cal -->
+		<div class="row" id="calmain">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+				<h3 class="panel-title">
+					2016 December
+				</h3>
+				</div>
+			</div>
+            <div class="calcell">
+            </div>
+			<!--<div class="calcell">
+				<div class="col-xs-2  left-cal" >
+					<font >Mon</font>
+					<font size="5"><strong>12</strong></font>
+				</div>
+				<div class="col-xs-9 right-cal">kdfjakfja</div>	
+			</div>
+			<hr/>-->
+		</div>
+	</div>
+</body>
+<script type="text/template" id="calcell-template">
+    
+		<div class="col-xs-2  left-cal" >
+			<font >{{weekday}}</font>
+			<font size="5"><strong>{{date}}</strong></font>
+		</div>
+
+	
+</script>
+</html>
