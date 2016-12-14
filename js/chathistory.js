@@ -4,7 +4,7 @@ function showContacts() {
 
 	var output = "";
 	$.ajax({
-		url: 'data/contact.json',
+		url: 'data/history.json',
 		type : 'GET',
 		dataType: 'json',
 	})
@@ -12,10 +12,10 @@ function showContacts() {
 			console.log("success", data);
 			for(var i=0;i<data.length;i++)
 			{
-				output += mt($("#contactcell-template").html(), data[i]);
+				output += mt($("#historycell-template").html(), data[i]);
 			}
 			//alert(output);
-			$(".fricell").append(output);
+			$(".historycell").append(output);
 			//randomly pick a response message between 0 and 4
 			/*var rand = Math.floor((Math.random() * 4));
 
@@ -76,7 +76,12 @@ var mt = function (template, data) {
 	if (!template || !data) return template || '';
 	for (var key in data) {
 		if (data.hasOwnProperty(key) === false) continue;
-		template = template.replace(RegExp('\{\{' + key + '}}', 'g'), data[key]);
+		if(key=="record")
+		{
+			template = template.replace(RegExp('\{\{' + key + '}}', 'g'), data[key][0]);
+		}else{
+			template = template.replace(RegExp('\{\{' + key + '}}', 'g'), data[key]);
+		}
 	}
 	return template;
 }
@@ -84,5 +89,4 @@ var mt = function (template, data) {
 
 $(function () {
 	showContacts();
-	
 });

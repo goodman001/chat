@@ -1,0 +1,21 @@
+[
+	{
+	"uid": 3,
+	"username": "Clifford",
+	"imghref":"images/3.jpg",
+	"time":"10:35",
+	"record":["Do you achieve your homework?","Reading is my favourate!"]
+	},{
+	"uid": 6,
+	"username": "Phoebe",
+	"imghref":"images/6.jpg",
+	"time":"12:12",
+	"record":["Do you love me?","I start to fall in love","Don't hate me!"]
+	},{
+	"uid": 7,
+	"username": "Katie",
+	"imghref":"images/7.jpg",
+	"time":"13:50",
+	"record":["I will give you a surprise!"]
+	}
+]

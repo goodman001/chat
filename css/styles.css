@@ -2,6 +2,7 @@
    // margin-right: -15px;
    // margin-left: -15px
 }
+.row{margin-top:50px;}
 .top-bar {
   background: #666;
   color: white;
@@ -52,7 +53,7 @@ body, html {
 
 .btn {
     font-weight: 700;
-    height: 36px;
+    height: 30px;
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
@@ -339,6 +340,10 @@ hr{
 {
 	margin-left:38%;
 }
+.medialink{color:black}
+.historydiv{padding-left: 0px;}
+.historyre{color:#C0C0C0;}
+/*history*/
 /*clear*/
 .clear
 {

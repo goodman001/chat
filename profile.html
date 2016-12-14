@@ -16,7 +16,6 @@
     <!--This is for our custome css that will override bootstraps css -->
     <link rel="stylesheet" href="css/styles.css">
 
-	<!--font-awesome -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Latest jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -62,12 +61,40 @@
 			<div class="panel panel-default navbar-fixed-top">
 				<div class="panel-heading">
 				<h3 class="panel-title">
-					Contacts
+					Me
 				</h3>
 				</div>
 			</div>
-            <div class="fricell">
-				
+            <div class="mecell">
+				<div class="media">
+					<a href="#" class="pull-left"><img src="images/local.jpg" class="contacts" /></a>
+					<div class="media-body">
+						<h4 class="media-heading">
+						Baby
+						</h4> 
+						<h5 class="media-heading">
+						ID: beauty
+						</h5> 
+					</div>
+				</div>
+				<div class="well well-sm">
+					<i class="fa fa-user" aria-hidden="true"></i>&nbsp; &nbsp; Gender: &nbsp; Girl
+				</div>
+				<div class="well well-sm">
+					<i class="fa fa-birthday-cake" aria-hidden="true"></i>&nbsp; &nbsp; Birthday: &nbsp; June 23, 2000
+				</div>
+				<div class="well well-sm">
+					<i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp; &nbsp; Address: &nbsp; 5/20/2000 
+				</div>
+				<div class="well well-sm">
+					<i class="fa fa-mobile" aria-hidden="true"></i>&nbsp; &nbsp; Tel: &nbsp; 281-453-2551
+				</div>
+				<div class="well well-sm">
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp; &nbsp; Email: &nbsp; CherylLMorin@jourrapide.com
+				</div>
+				<div class="well well-sm">
+					<i class="fa fa-sun-o" aria-hidden="true"></i>&nbsp; &nbsp; Setting
+				</div>
             </div>
 			<!--<div class="calcell">
 				<div class="col-xs-2  left-cal" >
@@ -80,18 +107,4 @@
 		</div>
 	</div>
 </body>
-<script type="text/template" id="contactcell-template">
-<div class="media">
-    <a href="chat.html?username={{username}}&uid={{uid}}" class="pull-left"><img src="{{imghref}}" class="contacts" /></a>
-    <div class="media-body">
-        <a href="chat.html?username={{username}}&uid={{uid}}">
-            <h5 class="media-heading">
-            {{username}}
-            </h5> 
-        </a>
-    </div>
-
-</div>
-<hr/>
-</script>
 </html>
