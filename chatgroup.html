@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example Chat App</title>
+    <!-- IE Edge Meta Tag -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!--This is for our custome css that will override bootstraps css -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Latest jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/chatgroup.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav navbar-nav navbar-right mobile-bar navbar-fixed-bottom">
+            <div class="input-group" style="margin-top:5px;">
+                <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." />
+                <span class="input-group-btn">
+                <button class="btn btn-primary btn-sm" id="btn-chat">Send</button>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-default navbar-fixed-top">
+                <div class="panel-heading">
+                <h3 class="panel-title chath3" >
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true" id="back" ></span><span id="chattop">Chat - Timothy</span>
+                </h3>
+                </div>
+            </div>
+            <div class="msg"></div>
+        </div>
+    </div>
+</body>
+<script type="text/template" id="chatreceived-template">
+    <div class="col-xs-8 ">
+        <div class="msg_container base_receive messages msg_receive">
+            <p>{{message}}</p>
+                
+        </div>
+        <center><time datetime="2009-11-13T20:00"><font size="2px">{{minutes}} min ago</font></time></center>
+    </div>
+    <div class="clear"></div>
+</script>
+<script type="text/template" id="chatsent-template">
+    <div class="col-xs-2">
+    </div>
+    <div class="col-xs-8">
+        <div class="messages msg_sent msg_container base_sent messages ">
+            <p>{{message}}</p>
+        </div>
+        <center><time datetime="2009-11-13T20:00"><font size="2px"> {{minutes}} min ago</font></time></center>
+    </div>
+    
+</script>
+</html>

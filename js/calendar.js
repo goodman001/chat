@@ -42,7 +42,13 @@ function doHandleMonth(month){
 /*get random event*/
 function getEvent()
 {
-	var events=["Have a meeting","Have a reading","Go to sport","Play football","Play the piano"];
+	var events=['<span><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;10:00</span></br><span><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Dinner</span></br><span><i class="fa fa-bookmark-o" aria-hidden="true"></i>&nbsp;&nbsp;at Alabama\'s &nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i></span></br><span><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Going: Clifford, Barton, Frank</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maybe:Hannah </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No:Tom</span></br>',
+				'<span><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;13:00</span></br><span><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Sing a song</span></br><span><i class="fa fa-bookmark-o" aria-hidden="true"></i>&nbsp;&nbsp;at Alabama\'s &nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i></span></br><span><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Group: Katie, Tom, Jerry</span></br>',
+				'<span><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;15:00</span></br><span><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Play football</span></br><span><i class="fa fa-bookmark-o" aria-hidden="true"></i>&nbsp;&nbsp;at Alabama\'s &nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i></span></br><span><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Group: Barton, Lucy</span></br>',
+				'<span><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;16:00</span></br><span><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Shopping</span></br><span><i class="fa fa-bookmark-o" aria-hidden="true"></i>&nbsp;&nbsp;at Alabama\'s &nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i></span></br><span><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Group: no one</span></br>',
+				'<span><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;17:00</span></br><span><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Swimming</span></br><span><i class="fa fa-bookmark-o" aria-hidden="true"></i>&nbsp;&nbsp;at Alabama\'s &nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i></span></br><span><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Group: Barton, Lucy,Katie, Tom, Jerry</span></br>',
+				'<span><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;18:00</span></br><span><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Dance</span></br><span><i class="fa fa-bookmark-o" aria-hidden="true"></i>&nbsp;&nbsp;at Alabama\'s &nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i></span></br><span><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Group: Clifford, Barton, Jerry</span></br>',
+			   ];
 	var flag = Math.round((Math.random()) * (events.length-1));
 	return events[flag];
 	
@@ -67,12 +73,12 @@ function showCalData() {
 	for (var i in arr) {
 		output += mt($("#calcell-template").html(), arr[i]);
 		var uls = "";
-		for(var j=0;j<=(Math.random()) * 5;j++){
-			var timer = 9 + Math.round((Math.random()) * 10);
-			var event_ = getEvent();
-			uls += '<span><i class="fa fa-clock-o" aria-hidden="true"></i><strong>'+timer+':00:</strong></span><span> '+event_+'</span></br>'
-		}
-		
+		/*for(var j=0;j<=(Math.random()) * 5;j++){
+			//var timer = 9 + Math.round((Math.random()) * 10);
+			//var event_ = getEvent();
+			uls += '<span><i class="fa fa-clock-o" aria-hidden="true"></i>10:00</span></br><span><i class="fa fa-bell" aria-hidden="true"></i>Dinner</span></br>';
+		}*/
+		uls = getEvent();
 		
 		output += '<div class="col-xs-9 right-cal">'+uls+'</div>';
 	}
@@ -98,4 +104,8 @@ $(function () {
 	
 	/*cal*/
 	showCalData();
+	/*group*/
+	$(".right-cal").on('click', function () {
+		 window.location.href="chatgroup.html";
+	});
 });

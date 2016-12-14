@@ -4,9 +4,7 @@ $(function () {
 		//alert("login!");
 		var user = $("#inputEmail").val();
 		var pwd = $("#inputPassword").val();
-		if(user && pwd){
-			window.location.href="mainpage.html";
-		}
+		window.location.href="mainpage.html";
 		
 
 	});	
