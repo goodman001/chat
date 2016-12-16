@@ -277,8 +277,9 @@ body.navbar-more-show  {
 }
 .left-cal
 {
-	margin-top: 20px;
-	background-color: #138ef3;
+	height:130px;
+	background-color: black;
+	color:white;
 	
 }
 .panel
@@ -288,10 +289,11 @@ body.navbar-more-show  {
 .right-cal
 {
 	
-	height:120px;
-	margin-top: 10px;
+	height:130px;
+	padding-top: 9px;
 	
 }
+
 .panel-default>.panel-heading
 {
 	background-color:black;
@@ -343,6 +345,19 @@ hr{
 .medialink{color:black}
 .historydiv{padding-left: 0px;}
 .historyre{color:#C0C0C0;}
+.grouptop
+{
+	text-align:center;
+	margin: 5px;
+	padding: 5px;
+	background-color: #F80929;
+	border-radius: 10px;
+	color:white;
+}
+.mapimg
+{
+	width:99%;
+}
 /*history*/
 /*clear*/
 .clear

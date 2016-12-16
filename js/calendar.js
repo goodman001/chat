@@ -80,7 +80,7 @@ function showCalData() {
 		}*/
 		uls = getEvent();
 		
-		output += '<div class="col-xs-9 right-cal">'+uls+'</div>';
+		output += '<div class="col-xs-9 right-cal">'+uls+'<hr/></div>';
 	}
 	$("#calmain").append(output)
 
